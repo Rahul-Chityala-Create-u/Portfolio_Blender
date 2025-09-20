@@ -1,0 +1,437 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.screen1{
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+
+}
+
+.screen2{
+  height: 100vh;
+  width: 100%;
+  /* background:url('./assets/cello-4709128.jpg'); */
+  background:url('./assets/spacerockWith mist.png');
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
+  /* background-size: cover; */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: popin linear forwards;
+  animation-timeline: view();
+  /* animation-range-end: cover; */
+
+}
+
+.screen3{
+  /* height: 100vh; */
+  
+  width: 100%;
+  /* background-color: turquoise; */
+  /* background-color: black; */
+  /* background:url('./assets/guitar-1839743.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.screen4{
+  height: 40vh;
+  width: 100%;
+  background-color: rgb(31, 31, 31);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
+      position: sticky;
+    top: -55px;
+
+}
+.screen5{
+  height: 150vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+}
+.screen5 h1{
+  text-shadow: 0px 10px 13px #acacac;
+  /* position: sticky;
+  top: 45%; */
+}
+.screen4 h1{
+  color: white;
+    font-size: 7rem;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    overflow: hidden;
+    animation: thanks linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+@keyframes thanks {
+  0% {
+    scale: 0.6;
+  }     
+  100% {
+    scale: 1;
+  }
+}
+@keyframes popin {
+  0% {
+    filter: blur(10px);
+    background-size: 100%;
+    /* transform: scale(1.2); */
+    opacity: 0;
+  }
+  40% {
+    filter: blur(0px);
+    background-size: 140%;
+    /* transform: scale(1); */
+    opacity: 1;
+  }
+  100%{
+    filter: blur(0px);
+    background-size: 100%;
+    /* transform: scale(1.1); */
+    opacity: 1;
+  }
+  /* 100% {
+    filter: blur(10px);
+    background-size: 100%;
+    opacity: 0;
+  } */
+}
+.screen2 p{
+      position: absolute;
+    top: 50%;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    animation:slideIn ease-in-out forwards;
+    animation-timeline: view();
+  }
+@keyframes slideIn {
+  0% {
+    left: 25%;
+    opacity: 0;
+  }20% {
+    left: 25%;
+    opacity: 0;
+  }
+  60% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+
+}
+}
+.screen2 h3{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  /* font-size: 3rem; */
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+      border-radius: 13px;
+    width: 80%;
+    text-shadow: 0 0 13px white;
+    animation: shrinkText ease-in-out forwards;
+    animation-timeline: view();
+  }
+.svgMusicNote{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background: url('./assets/music-note.svg');
+  /* background: url('./assets/belnd.svg'); */
+  /* background: url('./assets/blender_logo.png'); */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+     transform: translate(8.4vh, 8vh) rotate(11deg);
+         filter: drop-shadow(4px 5px 2px darkgrey);
+    opacity: 0.5;
+    scale: 10;
+  animation: moveLeftRight linear forwards;
+  animation-timeline: view();
+} 
+
+/* .svgMusicNote{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background: url('./assets/belnd.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+     transform: translate(8.4vh, 8vh) rotate(0deg);
+    opacity: 1;
+    scale: 4;
+  animation: moveHeroLogo linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 100%;
+} */
+@keyframes moveHeroLogo {
+  0%{
+
+   transform: translate(8.4vh, 8vh) rotate(0deg);
+
+  }
+  55% {
+    transform: translate(8.4vh, 8vh) rotate(0deg);
+    scale: 20;
+  }
+  100% {
+  transform: translate(40.4vh, 8vh) rotate(360deg);
+    scale: 1;
+}
+  
+}
+
+@keyframes moveLeftRight {
+  0%{
+   scale: 18;
+  }
+  100% {
+    scale: 1;
+  }
+  
+}
+.introName{
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: black;
+  font-size: 1.5rem;
+  background-color: rgba(255,255,255,0.7);
+  padding: 20px;
+      border-radius: 13px;
+    width: fit-content;
+    text-shadow: 0 0 13px white;
+    animation: shrinkText ease-in-out forwards;
+    animation-timeline: view();
+}
+@keyframes shrinkText {
+  0% {
+    font-size: 3rem;
+  }
+  100% {
+    font-size: 1rem;
+  }
+  
+}
+@keyframes moveNote {
+  0% {
+    transform: translate(-180px, 359px) rotate(0deg);
+    opacity: 1;
+  }
+    20% {
+      transform: translate(100vw, -100vh) rotate(360deg);
+    opacity: 1;
+    
+  }
+  100% {
+    transform: translate(100vw, -100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.musicJourneyImages img{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+      width: 70%;
+    place-self: center;
+    box-shadow: 0px 0px 10px -2px grey;
+
+}
+.musicJourneyImages{
+      /* height: 100%; */
+    overflow: clip;
+    margin-top: 10px;
+}
+.screen3heading{
+  color: black;
+  /* background-color: rgba(255,255,255,0.7); */
+  padding: 20px;
+      border-radius: 0px 0px 13px 13px;
+    width: 80%;
+    text-shadow: 0 0 13px white;
+    place-self: center;
+    overflow: hidden;
+ animation: setToTop linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+
+}
+
+@keyframes setToTop {
+  0% {
+    scale: 0.8;
+        transform: translate(0px, 100px);
+  }
+  100% {
+    scale: 1;
+        transform: translate(0px, 0px);
+  }
+  
+}
+
+.screen3heading h1{
+  font-size: 100px;
+}
+.screen3heading p{
+     border-radius: 0.5em;
+    background: #00000021;
+    padding: 3px;
+    color: black;
+    animation: change linear forwards;
+}
+
+.musicJourneyImages img{
+  /* transform: translate(-400px, 0px); */
+  /* animation: alternate-reverse floaty  linear forwards; */
+  scale: 0.5;
+  animation:  floaty  linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
+}
+@keyframes floaty {
+  0% {
+    transform: translate(0px, 0px);
+    scale: 1;
+    opacity: 0.5;
+    filter: blur(5px);
+  }
+  100% {
+    transform: translate(-500px, 0px);
+    scale: 0.5;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  
+}
+
+img:nth-child(even){
+  animation-direction: reverse;
+}
+.image{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  place-self: center;
+  border-bottom: 0.5px solid #b3b3b3;
+
+}
+
+.eventDetails{
+  animation: slideInDetails linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
+@keyframes slideInDetails {
+  0% {
+    transform: translate(-100px, 0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  
+}
+.blenderlogo{
+    width: 10em;
+    position: absolute;
+    scale: 1;
+        animation: animateLogo linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 70%;
+}
+@keyframes animateLogo{
+  from{
+  transform: rotate(360deg) scale(0.5) ;
+  }
+  to{
+  transform: rotate(0deg) scale(1);
+  }
+}
+.connectAt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.connectAt img{
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.connectAt img:hover{
+  transform: scale(1.2);
+}
+.connectAt img:nth-child(1){
+  animation: logoIn ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+@KEYFRAMES logoIn {
+  0% {
+    transform: translate(0px, 100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  
+}
+.contactHolder{
+    position: sticky;
+    top: 45%;
+}
+.screen3heading span{
+  color: orange;
+  text-shadow: 0px 2px 6px #2828288c;
+
+}
