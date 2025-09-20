@@ -415,7 +415,7 @@ img:nth-child(even){
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
 }
-@KEYFRAMES logoIn {
+@keyframes logoIn {
   0% {
     transform: translate(0px, 100px);
     opacity: 0;
