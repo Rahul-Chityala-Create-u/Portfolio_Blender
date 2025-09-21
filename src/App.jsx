@@ -2,11 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './MobileApp.css'
 import img1 from './assets/benten watch.png'
 import img2 from './assets/blue lava rock.png'
 import img3 from './assets/buddha_displacepent.png'
 import img4 from './assets/cello-4709128.jpg'
 import img5 from './assets/CANDY.png'
+import heroLogo from './assets/belnd.svg'
 import blenderlogo from './assets/blender_logo.png'
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
   return (
     <>
     <div className='screen1'>
-      <div className='svgMusicNote'></div>
+      <div className='svgMusicNote'><img  id='herologo' src={heroLogo} alt="" /></div>
     <h3 className='introName'>Hi! i am Rahul Chityala</h3>
     </div>
     <div className="screen2">

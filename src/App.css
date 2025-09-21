@@ -188,6 +188,9 @@
   animation: moveLeftRight linear forwards;
   animation-timeline: view();
 } 
+#herologo{
+  display: none;
+}
 
 /* .svgMusicNote{
   position: absolute;
@@ -360,6 +363,7 @@ img:nth-child(even){
   width: 80%;
   place-self: center;
   border-bottom: 0.5px solid #b3b3b3;
+  border-bottom: none;
 
 }
 
@@ -372,10 +376,14 @@ img:nth-child(even){
   0% {
     transform: translate(-100px, 0px);
     opacity: 0;
+        position: sticky;
+    top: 0
   }
   100% {
     transform: translate(0px, 0px);
     opacity: 1;
+        position: sticky;
+    top: 5px
   }
   
 }
